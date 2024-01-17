@@ -21,6 +21,6 @@ Route::get('/about_me', function () {
     return view('about');
 });
 
-Route::get('/hari', function () {
-    return "5 hari";
+Route::get('/halo', function () {
+    return view('hello', ['nama' => 'Raffi S.A.K', 'alamat' => 'Madiun']);
 });
