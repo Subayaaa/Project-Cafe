@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\HelloCtrl;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,14 +15,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HelloCtrl::class, 'index']);
 
-Route::get('/about_me', function () {
-    return view('about');
-});
+Route::get('/about', [HelloCtrl::class, 'about']);
 
-Route::get('/halo', function () {
-    return view('hello', ['nama' => 'Raffi S.A.K', 'alamat' => 'Madiun']);
-});
+Route::get('/tes', [HelloCtrl::class, 'test']);
+
+Route::get('/tes/{id}', [HelloCtrl::class, 'test']);
