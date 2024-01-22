@@ -19,6 +19,10 @@ Route::get('/', [HelloCtrl::class, 'index']);
 
 Route::get('/about', [HelloCtrl::class, 'about']);
 
+Route::get('/input', [HelloCtrl::class, 'input']);
+
+Route::post('/save', [HelloCtrl::class, 'simpan']);
+
 Route::get('/tes', [HelloCtrl::class, 'test']);
 
 Route::get('/tes/{id}', [HelloCtrl::class, 'test']);
