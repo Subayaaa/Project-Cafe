@@ -3,7 +3,7 @@
 @section('judul', 'Makanan')
 
 @section('content')
-    <table>
+    <table border="1">
         <thead>
             <tr>
                 <td>Kode</td>
