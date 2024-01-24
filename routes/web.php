@@ -25,4 +25,4 @@ Route::post('/save', [HelloCtrl::class, 'simpan']);
 
 Route::get('/tes', [HelloCtrl::class, 'test']);
 
-Route::get('/tes/{id}', [HelloCtrl::class, 'test']);
+Route::get('/makanan', [HelloCtrl::class, 'view_makanan']);

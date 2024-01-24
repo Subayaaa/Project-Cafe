@@ -13,8 +13,10 @@
             <li><a href="/about">About</a></li>
         </nav>
     </header>
-
-    @yield('content')
+    
+    <div class="container">
+        @yield('content')
+    </div>
 
     <footer>
         <p>IK2 @bestfalt - 2023</p>

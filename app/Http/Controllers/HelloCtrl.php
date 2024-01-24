@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Makanan;
+use App\Models\Kategori;
 
 class HelloCtrl extends Controller
 {
@@ -36,10 +38,24 @@ class HelloCtrl extends Controller
         ]);
     }
 
-    public function test($id = 0)
+    public function view_makanan()
     {
-        $nama = 'IK2';
+        $makanans = Makanan::all();
+        // dd($makanans);
 
-        return view('test', ['nama' => $nama, 'id' => $id]);
+        return view('makanan', ['foods' => $makanans]);
+    }
+
+    public function test()
+    {
+        Makanan::create([
+            'kd_makanan' => 'M003',
+            'nama' => 'Gorengan',
+            'kategori' => 'Snack',
+            'harga' => 1000,
+            'ket' => 'ada'
+        ]);
+
+        return 'berhasil simpan!';
     }
 }
