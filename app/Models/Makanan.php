@@ -12,6 +12,8 @@ class Makanan extends Model
     protected $table = 'makanans';
 
     protected $primaryKey = 'kd_makanan';
+    
+    public $incrementing = false;
 
     protected $fillable = [
         'kd_makanan',
