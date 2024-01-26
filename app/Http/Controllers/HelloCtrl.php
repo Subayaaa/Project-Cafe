@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Models\Makanan;
 use App\Models\Kategori;
 
@@ -48,13 +49,23 @@ class HelloCtrl extends Controller
 
     public function test()
     {
+        // DB::table('makanans')->insert([
+        //     'kd_makanan' => 'M004',
+        //     'nama' => 'Es Teh',
+        //     'kategori' => 'Minuman',
+        //     'harga' => 2500,
+        //     'ket' => 'ada'
+        // ]);
+
         Makanan::create([
-            'kd_makanan' => 'M003',
-            'nama' => 'Gorengan',
-            'kategori' => 'Snack',
-            'harga' => 1000,
+            'kd_makanan' => 'M006',
+            'nama' => 'Es Telo',
+            'kategori' => 'Minuman',
+            'harga' => 2500,
             'ket' => 'ada'
         ]);
+
+        // Makanan::find('M004')->delete();
 
         return 'berhasil simpan!';
     }
