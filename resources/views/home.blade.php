@@ -1,7 +1,7 @@
-@extends('template')
+@extends('template.index')
 
 @section('judul', 'Home')
 
 @section('content')
-    <h2>halaman home</h2>
+    <h3>Lorem ipsum dolor sit amet consectetur adipisicing Home.</h3>
 @endsection

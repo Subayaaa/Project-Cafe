@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\HelloCtrl;
+use App\Http\Controllers\MenuCtrl;
+use App\Http\Controllers\KategoriCtrl;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +19,6 @@ use App\Http\Controllers\HelloCtrl;
 
 Route::get('/', [HelloCtrl::class, 'index']);
 
-Route::get('/about', [HelloCtrl::class, 'about']);
+Route::get('/menu', [MenuCtrl::class, 'index']);
 
-Route::get('/input', [HelloCtrl::class, 'input']);
-
-Route::post('/save', [HelloCtrl::class, 'simpan']);
-
-Route::get('/tes', [HelloCtrl::class, 'test']);
-
-Route::get('/makanan', [HelloCtrl::class, 'view_makanan']);
+Route::get('/kategori', [KategoriCtrl::class, 'index']);
